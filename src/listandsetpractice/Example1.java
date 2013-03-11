@@ -1,6 +1,7 @@
 package listandsetpractice;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -84,12 +85,24 @@ public class Example1 {
             System.out.println(s);
         }
 
-//        boolean itIsHere = groceryList.contains("Sprinkles");
-//        System.out.println("List contains Sprinkles? " + itIsHere);
-//        itIsHere = groceryList.contains("Graham crackers");
-//        System.out.println("List contains Graham crackers? " + itIsHere);
-//        itIsHere = groceryList.containsAll(getTheseToo);
-//        System.out.println("List contains getTheseToo? " + itIsHere);
+        Collections.sort(groceryList);
+        System.out.println("------After sort---------------------");
+        for (String s : groceryList) {
+            System.out.println(s);
+        }
+
+        Collections.reverse(groceryList);
+        System.out.println("------After reverse---------------------");
+        for (String s : groceryList) {
+            System.out.println(s);
+        }
+
+        Collections.shuffle(groceryList);
+        System.out.println("------After collections shuffle---------------");
+        for (String s : groceryList) {
+            System.out.println(s);
+        }
+
 
 
     }
